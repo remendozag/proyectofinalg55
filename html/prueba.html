@@ -1,0 +1,19 @@
+<div *ngIf = "condición">
+    Render si la condición es true.
+</div>
+<div *ngIf="title !== '' "> 
+    <span>{{ title }} app is running!</span>
+ </div>
+
+ <!-- elemento a ocultar/mostrar -->
+<div *ngIf="mostrar" class="card text-white bg-info mb-3">
+    <div class="card-body">
+        <h5 class="card-title">{{ frase.autor }}</h5>
+        <p class="card-text">{{ frase.mensaje }}</p>
+    </div>
+</div>
+
+<!-- botón para ejecutar la acción -->
+<button (click)="mostrar = !mostrar" class="btn btn-outline-info btn-block">
+		Mostar/Ocultar
+</button>
